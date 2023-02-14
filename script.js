@@ -1,45 +1,31 @@
-// bouton toggle dark mode
-let buttonSwitch = document.querySelector(".switchMode");
+//? ---- variable ----
 
-
-
-buttonSwitch.addEventListener("click", ()=>{
-            iconLight.classList.toggle("")
-            iconLight.classList.toggle("")
-            
-            
-    }   
- 
- )
-
-
-//script dark mode
 let switchMode = document.querySelector(".switchMode");
 let body = document.querySelector("body")
 let card = document.querySelector('.card')
-
-
-
-
 let allElement = document.querySelectorAll('*')
 
 
 
 
+//script dark mode
 
 
 
+
+
+//? ---- function ----
 
 
 
 function toggleDarkTheme(mode,...elements ){
-
+    
     elements.forEach(element => {
         
         element.forEach(tag => {
-
+            
             let classes = tag.classList['value'].split(' ')
-                // "card card--light"
+            // "card card--light"
                 
             if (mode == "dark") {
                 
@@ -63,20 +49,36 @@ function toggleDarkTheme(mode,...elements ){
     });
 }
 
+
+
+
+//? ---- evenement ----
+
+
+// buttonSwitch.addEventListener("click", ()=>{
+//     iconLight.classList.toggle("")
+//     iconLight.classList.toggle("")
     
-    switchMode.addEventListener("click", ()=>{
+    
+// })
+
+
+    
+switchMode.addEventListener("click", ()=>{
+    
+
+    if(localStorage.getItem("theme") == "dark"){
         
-    
-        if(localStorage.getItem("theme") == "dark"){
-            
-            localStorage.setItem("theme", "");
-            toggleDarkTheme("light", allElement)
-            
-        }
-        else{
-            localStorage.setItem("theme", "dark");
-            toggleDarkTheme("dark", allElement)
-            
-    
-        }
-    })
+        localStorage.setItem("theme", "");
+        toggleDarkTheme("light", allElement)
+        body.style.backgroundColor = "white"
+        
+    }
+    else{
+        localStorage.setItem("theme", "dark");
+        toggleDarkTheme("dark", allElement)
+        body.style.backgroundColor = "#2f2f2f"
+        
+
+    }
+})
