@@ -56,13 +56,13 @@
     justify-content: space-around;
     gap :1rem;
 
-    transition: all 0.5 ease;
+    transition: all 150ms ease;
 }
 
-.card--ligth{
-    background-color: #d2d2d2;
+.card--light{
+    background-color: #fefefe;
     color: #2d2d2d;
-    border: 2px solid #2d2d2d;
+    border: none;
     box-shadow:  -5px -4px 26px -2px #2d2d2dee
 }
 .card--dark{
@@ -70,4 +70,29 @@
     color: #d2d2d2;
     border: 2px solid rgb(8, 3, 146);
     box-shadow:  -5px -4px 26px -2px #d2d2d2aa;
+}
+
+/*? switcher  */
+
+.switchMode{
+    margin-inline: auto;
+    display: block;
+    padding: 14px 56px;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 500;
+}
+.switchMode--light{
+    color: #fefefe;
+    background-color: #2d2d2d;
+}
+.switchMode--light:hover{
+    background-color: hsl(0, 0%, 8%);
+}
+.switchMode--dark{
+    background-color: hsl(0, 0%, 100%);
+    color: #2d2d2d;
+}
+.switchMode--dark:hover{
+    background-color: hsl(0, 0%, 90%);
 }

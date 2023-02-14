@@ -55,12 +55,12 @@ function toggleDarkTheme(mode,...elements ){
 //? ---- evenement ----
 
 
-buttonSwitch.addEventListener("click", ()=>{
-    iconLight.classList.toggle("")
-    iconLight.classList.toggle("")
+// buttonSwitch.addEventListener("click", ()=>{
+//     iconLight.classList.toggle("")
+//     iconLight.classList.toggle("")
     
     
-})
+// })
 
 
     
@@ -71,11 +71,13 @@ switchMode.addEventListener("click", ()=>{
         
         localStorage.setItem("theme", "");
         toggleDarkTheme("light", allElement)
+        body.style.backgroundColor = "white"
         
     }
     else{
         localStorage.setItem("theme", "dark");
         toggleDarkTheme("dark", allElement)
+        body.style.backgroundColor = "#2f2f2f"
         
 
     }
