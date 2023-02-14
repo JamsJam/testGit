@@ -2,6 +2,7 @@
 let buttonSwitch = document.querySelector(".switchMode");
 
 
+
 buttonSwitch.addEventListener("click", ()=>{
             iconLight.classList.toggle("")
             iconLight.classList.toggle("")
