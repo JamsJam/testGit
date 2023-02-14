@@ -81,6 +81,8 @@
     cursor: pointer;
     font-size: 2rem;
     font-weight: 500;
+    transition : all 120ms ease;
+    border-radius: 10px;
 }
 .switchMode--light{
     color: #fefefe;
@@ -89,6 +91,7 @@
 .switchMode--light:hover{
     background-color: hsl(0, 0%, 8%);
 }
+
 .switchMode--dark{
     background-color: hsl(0, 0%, 100%);
     color: #2d2d2d;
