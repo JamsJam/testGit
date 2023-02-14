@@ -1,18 +1,5 @@
-// bouton toggle dark mode
-let buttonSwitch = document.querySelector(".switchMode");
+//? ---- variable ----
 
-
-buttonSwitch.addEventListener("click", ()=>{
-            iconLight.classList.toggle("")
-            iconLight.classList.toggle("")
-            
-            
-    }   
- 
- )
-
-
-//script dark mode
 let switchMode = document.querySelector(".switchMode");
 let body = document.querySelector("body")
 let card = document.querySelector('.card')
@@ -23,22 +10,34 @@ let card = document.querySelector('.card')
 let allElement = document.querySelectorAll('*')
 
 
+buttonSwitch.addEventListener("click", ()=>{
+    iconLight.classList.toggle("")
+    iconLight.classList.toggle("")
+    
+    
+}   
+
+)
+
+
+//script dark mode
 
 
 
 
 
+//? ---- function ----
 
 
 
 function toggleDarkTheme(mode,...elements ){
-
+    
     elements.forEach(element => {
         
         element.forEach(tag => {
-
+            
             let classes = tag.classList['value'].split(' ')
-                // "card card--light"
+            // "card card--light"
                 
             if (mode == "dark") {
                 
@@ -61,6 +60,13 @@ function toggleDarkTheme(mode,...elements ){
         })
     });
 }
+
+
+
+
+//? ---- evenement ----
+
+
 
     
     switchMode.addEventListener("click", ()=>{
